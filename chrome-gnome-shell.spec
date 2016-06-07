@@ -1,5 +1,5 @@
 Name:           chrome-gnome-shell
-Version:        6
+Version:        6.1
 Release:        1%{?dist}
 Summary:        GNOME Shell integration for Chrome
 
@@ -53,6 +53,9 @@ popd
 %config(noreplace) %{_sysconfdir}/opt/chrome/native-messaging-hosts/io.github.ne0sight.gs_chrome_connector.json
 
 %changelog
+* Tue Jun 07 2016 Maxim Orlov <murmansksity@gmail.com> - 6.1-1.R
+- Update to Ver.6.1
+
 * Sat May 14 2016 Maxim Orlov <murmansksity@gmail.com> - 6-1.R
 - Update to Ver.6
 - Fix "orphaned directory"
