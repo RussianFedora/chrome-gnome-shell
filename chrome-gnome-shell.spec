@@ -39,7 +39,7 @@ popd
 %files
 %doc README.md
 %license LICENSE
-%{_bindir}/gs-chrome-connector
+%{_bindir}/chrome-gnome-shell
 %dir %{_datadir}/chromium
 %dir %{_datadir}/chromium/extensions
 %{_datadir}/chromium/extensions/gphhapmejobijbbhgpjhcjognlahblep.json
@@ -49,9 +49,11 @@ popd
 %dir %{_sysconfdir}/chromium
 %dir %{_sysconfdir}/chromium/native-messaging-hosts
 %config(noreplace) %{_sysconfdir}/chromium/native-messaging-hosts/io.github.ne0sight.gs_chrome_connector.json
+%config(noreplace) %{_sysconfdir}/chromium/native-messaging-hosts/org.gnome.chrome_gnome_shell.json
 %dir %{_sysconfdir}/opt/chrome
 %dir %{_sysconfdir}/opt/chrome/native-messaging-hosts
 %config(noreplace) %{_sysconfdir}/opt/chrome/native-messaging-hosts/io.github.ne0sight.gs_chrome_connector.json
+%config(noreplace) %{_sysconfdir}/opt/chrome/native-messaging-hosts/org.gnome.chrome_gnome_shell.json
 
 %changelog
 * Sat Aug 06 2016 Maxim Orlov <murmansksity@gmail.com> - 6.2-1.R
