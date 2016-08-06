@@ -1,6 +1,6 @@
 Name:           chrome-gnome-shell
-Version:        6.1
-Release:        2%{?dist}
+Version:        6.2
+Release:        1%{?dist}
 Summary:        GNOME Shell integration for Chrome
 
 License:        GPLv3+
@@ -54,6 +54,9 @@ popd
 %config(noreplace) %{_sysconfdir}/opt/chrome/native-messaging-hosts/io.github.ne0sight.gs_chrome_connector.json
 
 %changelog
+* Sat Aug 06 2016 Maxim Orlov <murmansksity@gmail.com> - 6.2-1.R
+- Update to Ver.6.2
+
 * Sun Jul 31 2016 Maxim Orlov <murmansksity@gmail.com> - 6.1-2.R
 - Add missing Requires: python-gobject-base
 
