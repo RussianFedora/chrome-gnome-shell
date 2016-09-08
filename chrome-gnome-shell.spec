@@ -1,5 +1,5 @@
 Name:           chrome-gnome-shell
-Version:        6.2
+Version:        7
 Release:        1%{?dist}
 Summary:        GNOME Shell integration for Chrome
 
@@ -10,9 +10,9 @@ Source0:        https://download.gnome.org/sources/%{name}/%{version}/%{name}-%{
 BuildArch:      noarch
 
 BuildRequires:  cmake
+BuildRequires:  python2-devel
 Requires:       gnome-shell
 Requires:       python-gobject-base
-Requires:       python2
 
 %description
 Web extension for Google Chrome browser and native connector that provides
@@ -40,22 +40,26 @@ popd
 %doc README.md
 %license LICENSE
 %{_bindir}/chrome-gnome-shell
-%dir %{_datadir}/chromium
-%dir %{_datadir}/chromium/extensions
-%{_datadir}/chromium/extensions/gphhapmejobijbbhgpjhcjognlahblep.json
-%dir %{_datadir}/google-chrome
-%dir %{_datadir}/google-chrome/extensions
-%{_datadir}/google-chrome/extensions/gphhapmejobijbbhgpjhcjognlahblep.json
 %dir %{_sysconfdir}/chromium
 %dir %{_sysconfdir}/chromium/native-messaging-hosts
+%dir %{_sysconfdir}/chromium/policies
+%dir %{_sysconfdir}/chromium/policies/managed
 %config(noreplace) %{_sysconfdir}/chromium/native-messaging-hosts/io.github.ne0sight.gs_chrome_connector.json
 %config(noreplace) %{_sysconfdir}/chromium/native-messaging-hosts/org.gnome.chrome_gnome_shell.json
+%config(noreplace) %{_sysconfdir}/chromium/policies/managed/chrome-gnome-shell.json
 %dir %{_sysconfdir}/opt/chrome
 %dir %{_sysconfdir}/opt/chrome/native-messaging-hosts
+%dir %{_sysconfdir}/opt/chrome/policies
+%dir %{_sysconfdir}/opt/chrome/policies/managed
 %config(noreplace) %{_sysconfdir}/opt/chrome/native-messaging-hosts/io.github.ne0sight.gs_chrome_connector.json
 %config(noreplace) %{_sysconfdir}/opt/chrome/native-messaging-hosts/org.gnome.chrome_gnome_shell.json
+%config(noreplace) %{_sysconfdir}/opt/chrome/policies/managed/chrome-gnome-shell.json
+%{python2_sitelib}/chrome_gnome_shell-*.egg-info
 
 %changelog
+* Thu Sep 08 2016 Maxim Orlov <murmansksity@gmail.com> - 7-1.R
+- Update to Ver.7
+
 * Sat Aug 06 2016 Maxim Orlov <murmansksity@gmail.com> - 6.2-1.R
 - Update to Ver.6.2
 
