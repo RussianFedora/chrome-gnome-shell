@@ -15,9 +15,10 @@ Requires:       gnome-shell
 Requires:       python-gobject-base
 
 %description
-Web extension for Google Chrome browser and native connector that provides
-integration with GNOME Shell and the corresponding extensions repository
-https://extensions.gnome.org.
+This repository contains Web extension for Google Chrome/Chromium, Vivaldi,
+Opera (and other WebExtensions capable browsers) and native host messaging
+connector that provides integration with GNOME Shell and the corresponding
+extensions repository https://extensions.gnome.org/.
                                                                          
 %prep
 %autosetup
