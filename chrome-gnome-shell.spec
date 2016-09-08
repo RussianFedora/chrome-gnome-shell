@@ -57,21 +57,21 @@ popd
 %{python2_sitelib}/chrome_gnome_shell-*.egg-info
 
 %changelog
-* Thu Sep 08 2016 Maxim Orlov <murmansksity@gmail.com> - 7-1
+* Thu Sep 08 2016 Maxim Orlov <murmansksity@gmail.com> - 7-1.R
 - Update to Ver.7
 
-* Sat Aug 06 2016 Maxim Orlov <murmansksity@gmail.com> - 6.2-1
+* Sat Aug 06 2016 Maxim Orlov <murmansksity@gmail.com> - 6.2-1.R
 - Update to Ver.6.2
 
-* Sun Jul 31 2016 Maxim Orlov <murmansksity@gmail.com> - 6.1-2
+* Sun Jul 31 2016 Maxim Orlov <murmansksity@gmail.com> - 6.1-2.R
 - Add missing Requires: python-gobject-base
 
-* Tue Jun 07 2016 Maxim Orlov <murmansksity@gmail.com> - 6.1-1
+* Tue Jun 07 2016 Maxim Orlov <murmansksity@gmail.com> - 6.1-1.R
 - Update to Ver.6.1
 
-* Sat May 14 2016 Maxim Orlov <murmansksity@gmail.com> - 6-1
+* Sat May 14 2016 Maxim Orlov <murmansksity@gmail.com> - 6-1.R
 - Update to Ver.6
 - Fix "orphaned directory"
 
-* Mon Apr 11 2016 Maxim Orlov <murmansksity@gmail.com> - 5.2-1
+* Mon Apr 11 2016 Maxim Orlov <murmansksity@gmail.com> - 5.2-1.R
 - Initial package.
