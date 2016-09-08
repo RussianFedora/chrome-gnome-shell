@@ -1,5 +1,5 @@
 Название:	        chrome-gnome-shell
 Мейнтейнер:	        Maxim Orlov
 Репозиторий:	        russianfedora-free
-Почему не в апстриме:	Очевидно же, из-за Chrome
-Комментарий:	        Интеграция GNOME Shell для Chrome
+Почему не в апстриме:	Без понятия
+Комментарий:	        Интеграция GNOME Shell для Google Chrome/Chromium, Vivaldi, Opera
