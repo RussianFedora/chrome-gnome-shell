@@ -15,10 +15,9 @@ Requires:       gnome-shell
 Requires:       python-gobject-base
 
 %description
-This repository contains Web extension for Google Chrome/Chromium, Vivaldi,
-Opera (and other WebExtensions capable browsers) and native host messaging
-connector that provides integration with GNOME Shell and the corresponding
-extensions repository https://extensions.gnome.org/.
+Web extension for Google Chrome/Chromium, Vivaldi, Opera and native host
+messaging connector that provides integration with GNOME Shell and the
+corresponding extensions repository https://extensions.gnome.org.
                                                                          
 %prep
 %autosetup
@@ -58,21 +57,21 @@ popd
 %{python2_sitelib}/chrome_gnome_shell-*.egg-info
 
 %changelog
-* Thu Sep 08 2016 Maxim Orlov <murmansksity@gmail.com> - 7-1.R
+* Thu Sep 08 2016 Maxim Orlov <murmansksity@gmail.com> - 7-1
 - Update to Ver.7
 
-* Sat Aug 06 2016 Maxim Orlov <murmansksity@gmail.com> - 6.2-1.R
+* Sat Aug 06 2016 Maxim Orlov <murmansksity@gmail.com> - 6.2-1
 - Update to Ver.6.2
 
-* Sun Jul 31 2016 Maxim Orlov <murmansksity@gmail.com> - 6.1-2.R
+* Sun Jul 31 2016 Maxim Orlov <murmansksity@gmail.com> - 6.1-2
 - Add missing Requires: python-gobject-base
 
-* Tue Jun 07 2016 Maxim Orlov <murmansksity@gmail.com> - 6.1-1.R
+* Tue Jun 07 2016 Maxim Orlov <murmansksity@gmail.com> - 6.1-1
 - Update to Ver.6.1
 
-* Sat May 14 2016 Maxim Orlov <murmansksity@gmail.com> - 6-1.R
+* Sat May 14 2016 Maxim Orlov <murmansksity@gmail.com> - 6-1
 - Update to Ver.6
 - Fix "orphaned directory"
 
-* Mon Apr 11 2016 Maxim Orlov <murmansksity@gmail.com> - 5.2-1.R
+* Mon Apr 11 2016 Maxim Orlov <murmansksity@gmail.com> - 5.2-1
 - Initial package.
