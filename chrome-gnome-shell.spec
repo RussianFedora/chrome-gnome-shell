@@ -1,5 +1,5 @@
 Name:           chrome-gnome-shell
-Version:        7
+Version:        7.1
 Release:        1%{?dist}
 Summary:        GNOME Shell integration for Chrome
 
@@ -57,6 +57,9 @@ popd
 %{python2_sitelib}/chrome_gnome_shell-*.egg-info
 
 %changelog
+* Mon Sep 26 2016 Maxim Orlov <murmansksity@gmail.com> - 7.1-1.R
+- Update to Ver.7.1
+
 * Thu Sep 08 2016 Maxim Orlov <murmansksity@gmail.com> - 7-1.R
 - Update to Ver.7
 
