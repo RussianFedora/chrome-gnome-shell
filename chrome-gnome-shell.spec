@@ -31,6 +31,7 @@ mkdir build
 pushd build
   %cmake .. \
     -DCMAKE_INSTALL_PREFIX=%{_prefix} \
+    -DCMAKE_INSTALL_LIBDIR=%{_libdir} \
     -DBUILD_EXTENSION=OFF
   %make_build
 popd
