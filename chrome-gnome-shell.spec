@@ -1,18 +1,22 @@
+%define debug_package %{nil}
+
 Name:           chrome-gnome-shell
-Version:        7.1
+Version:        8.2.1
 Release:        1%{?dist}
 Summary:        GNOME Shell integration for Chrome
 
 License:        GPLv3+
 URL:            https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome
-Source0:        https://download.gnome.org/sources/%{name}/%{version}/%{name}-%{version}.tar.xz
-
-BuildArch:      noarch
+Source0:        https://github.com/nE0sIghT/%{name}-mirror/archive/v8.2.1.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:  cmake
 BuildRequires:  python2-devel
+BuildRequires:  jq
+
 Requires:       gnome-shell
 Requires:       python-gobject-base
+
+Provides:       %{name}-mirror = %{version}-%{release}
 
 %description
 Web extension for Google Chrome/Chromium, Vivaldi, Opera and native host
@@ -20,7 +24,7 @@ messaging connector that provides integration with GNOME Shell and the
 corresponding extensions repository https://extensions.gnome.org.
                                                                          
 %prep
-%autosetup
+%autosetup -n %{name}-mirror-%{version}
 
 %build
 mkdir build
@@ -44,19 +48,24 @@ popd
 %dir %{_sysconfdir}/chromium/native-messaging-hosts
 %dir %{_sysconfdir}/chromium/policies
 %dir %{_sysconfdir}/chromium/policies/managed
-%config(noreplace) %{_sysconfdir}/chromium/native-messaging-hosts/io.github.ne0sight.gs_chrome_connector.json
 %config(noreplace) %{_sysconfdir}/chromium/native-messaging-hosts/org.gnome.chrome_gnome_shell.json
 %config(noreplace) %{_sysconfdir}/chromium/policies/managed/chrome-gnome-shell.json
 %dir %{_sysconfdir}/opt/chrome
 %dir %{_sysconfdir}/opt/chrome/native-messaging-hosts
 %dir %{_sysconfdir}/opt/chrome/policies
 %dir %{_sysconfdir}/opt/chrome/policies/managed
-%config(noreplace) %{_sysconfdir}/opt/chrome/native-messaging-hosts/io.github.ne0sight.gs_chrome_connector.json
 %config(noreplace) %{_sysconfdir}/opt/chrome/native-messaging-hosts/org.gnome.chrome_gnome_shell.json
 %config(noreplace) %{_sysconfdir}/opt/chrome/policies/managed/chrome-gnome-shell.json
+%{_libdir}/mozilla/native-messaging-hosts/org.gnome.chrome_gnome_shell.json
+%{_datadir}/applications/org.gnome.ChromeGnomeShell.desktop
+%{_datadir}/icons/gnome/*/apps/org.gnome.ChromeGnomeShell.png
+%{_datadir}/dbus-1/services/org.gnome.ChromeGnomeShell.service
 %{python2_sitelib}/chrome_gnome_shell-*.egg-info
 
 %changelog
+* Wed Apr 12 2017 Arkady L. Shane <ashejn@russianfedora.pro> - 8.2.1-1
+- update to Ver.8.2.1
+
 * Mon Sep 26 2016 Maxim Orlov <murmansksity@gmail.com> - 7.1-1.R
 - Update to Ver.7.1
 
