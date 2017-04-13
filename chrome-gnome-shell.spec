@@ -2,7 +2,7 @@
 
 Name:           chrome-gnome-shell
 Version:        8.2.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        GNOME Shell integration for Chrome
 
 License:        GPLv3+
@@ -15,6 +15,7 @@ BuildRequires:  jq
 
 Requires:       gnome-shell
 Requires:       python-gobject-base
+Requires:       python2-requests
 
 Provides:       %{name}-mirror = %{version}-%{release}
 
@@ -64,6 +65,9 @@ popd
 %{python2_sitelib}/chrome_gnome_shell-*.egg-info
 
 %changelog
+* Thu Apr 13 2017 Arkady L. Shane <ashejn@russianfedora.pro> - 8.2.1-2
+- added R: python2-requests
+
 * Wed Apr 12 2017 Arkady L. Shane <ashejn@russianfedora.pro> - 8.2.1-1
 - update to Ver.8.2.1
 
