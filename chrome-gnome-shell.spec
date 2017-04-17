@@ -1,13 +1,13 @@
 %define debug_package %{nil}
 
 Name:           chrome-gnome-shell
-Version:        8.2.1
-Release:        2%{?dist}
+Version:        9
+Release:        1%{?dist}
 Summary:        GNOME Shell integration for Chrome
 
 License:        GPLv3+
 URL:            https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome
-Source0:        https://github.com/nE0sIghT/%{name}-mirror/archive/v8.2.1.tar.gz#/%{name}-%{version}.tar.gz
+Source0:        http://ftp.gnome.org/pub/gnome/sources/%{name}/%{version}/%{name}-%{version}.tar.xz
 
 BuildRequires:  cmake
 BuildRequires:  python2-devel
@@ -25,7 +25,7 @@ messaging connector that provides integration with GNOME Shell and the
 corresponding extensions repository https://extensions.gnome.org.
                                                                          
 %prep
-%autosetup -n %{name}-mirror-%{version}
+%autosetup
 
 %build
 mkdir build
@@ -65,6 +65,9 @@ popd
 %{python2_sitelib}/chrome_gnome_shell-*.egg-info
 
 %changelog
+* Mon Apr 17 2017 Arkady L. Shane <ashejn@russianfedora.pro> - 9-1
+- update to 9
+
 * Thu Apr 13 2017 Arkady L. Shane <ashejn@russianfedora.pro> - 8.2.1-2
 - added R: python2-requests
 
